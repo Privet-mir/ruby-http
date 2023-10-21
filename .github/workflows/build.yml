@@ -31,4 +31,4 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: h04x00/ruby-http:v3
+          tags: h04x00/ruby-http:v4
