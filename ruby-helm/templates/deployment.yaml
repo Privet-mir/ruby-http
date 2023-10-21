@@ -1,16 +1,15 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Rollout
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: {{ include "ruby-helm.fullname" . }}
   labels:
     {{- include "ruby-helm.labels" . | nindent 4 }}
 spec:
   strategy:
-    blueGreen:
-      activeService: {{ include "ruby-helm.fullname" . }} 
-      previewService: {{ include "ruby-helm.fullname" . }}-preview
-      autoPromotionEnabled: false
-      scaleDownDelaySeconds: 60
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}

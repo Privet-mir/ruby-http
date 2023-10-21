@@ -7,8 +7,8 @@ metadata:
     {{- include "ruby-helm.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
-    apiVersion: argoproj.io/v1alpha1
-    kind: Rollout
+    apiVersion: apps/v1
+    kind: Deployment
     name: {{ include "ruby-helm.fullname" . }}
   minReplicas: {{ .Values.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.autoscaling.maxReplicas }}
