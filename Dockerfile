@@ -6,14 +6,14 @@ RUN apk add ruby
 
 RUN rm -rf /var/cache/apk/*
 
-#Creating a user by name ruby
-RUN adduser -D ruby
+#Creating a user by name mohammed
+RUN adduser -D mohammed
 #Setting the user
-USER ruby
+USER mohammed
 
 WORKDIR /usr/src/app/
 
-COPY --chown=ruby . ./
+COPY --chown=mohammed . ./
 
 EXPOSE 80
 #When setting the CMD instruction, prefer the exec format over the shell format
