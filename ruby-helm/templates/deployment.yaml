@@ -10,6 +10,7 @@ spec:
       activeService: {{ include "ruby-helm.fullname" . }} 
       previewService: {{ include "ruby-helm.fullname" . }}-preview
       autoPromotionEnabled: false
+      scaleDownDelaySeconds: 60
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
