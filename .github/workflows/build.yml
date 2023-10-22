@@ -27,6 +27,10 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+    - 
+        name: Set COMMIT_SHA_SHORT
+        id: commit_sha
+        run: echo "::set-output name=sha::$(echo $GITHUB_SHA | cut -c1-7)"
       -
         name: Build and push
         uses: docker/build-push-action@v5
@@ -34,4 +38,4 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: h04x00/ruby-http:${{ github.sha | slice(0,7) }}
+          tags: h04x00/ruby-http:${{ steps.commit_sha.outputs.sha }}
