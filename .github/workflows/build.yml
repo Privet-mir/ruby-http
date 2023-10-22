@@ -5,6 +5,9 @@ on:
     branches:
       - 'main'
 
+env:
+  COMMIT_SHA: ${{ github.sha }}
+
 jobs:
   docker:
     runs-on: ubuntu-latest
@@ -31,4 +34,4 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: h04x00/ruby-http:v5
+          tags: h04x00/ruby-http:$COMMIT_SHA

@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ruby
+spec:
+  destination:
+    name: ''
+    namespace: ruby
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: ruby-helm
+    repoURL: 'https://github.com/Privet-mir/ruby-http.git'
+    targetRevision: main
+    helm:
+      valueFiles:
+        - values.yaml
+  sources: []
+  project: default
+
