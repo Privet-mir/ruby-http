@@ -3,7 +3,7 @@
 ## Table of Contents
 - [Prerequisites](#prerequisites)
 - [Features](#features)
-- [Cluster Setup](#clustersetup)
+- [ClusterSetup](#clustersetup)
 - [Design](#design)
 - [Build](#build)
 - [Deploy](#deploy)
@@ -34,10 +34,8 @@ Task has following features
 - **Ingress for Accessibility**: The application is exposed via Ingress, making it accessible to external users.
 - **Health Checks and Liveness Probes**: Application reliability is ensured using health checks and liveness probes. Kubernetes can automatically restart unhealthy containers.
 
-CI/CD Pipeline Design
-<img width=740px height=250px src="./images/design.png" alt="DockerHub"></a>
 
-## Cluster Setup
+## ClusterSetup
 
 Setting up your Kubernetes cluster is the initial step to get application running. Follow these steps:
 
@@ -83,7 +81,9 @@ Building and testing your application is an essential part of the deployment pro
 
 ## Deploy
 
-Now, let's deploy Ruby HTTP application and related components:
+Now, let's deploy Ruby HTTP application and related components.:
+
+Helm chart for application is located in `ruby-helm`.
 
 1. Run the `setup.sh` script to set up application and the necessary components:
     ```shell

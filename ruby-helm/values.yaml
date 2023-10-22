@@ -8,7 +8,7 @@ image:
   repository: h04x00/ruby-http
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v4"
+  tag: "4995642"
 
 imagePullSecrets: []
 nameOverride: ""
