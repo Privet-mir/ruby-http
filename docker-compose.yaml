@@ -1,0 +1,9 @@
+version: '3'
+services:
+  ruby:
+    build:
+      context: .
+      dockerfile: Dockerfile  # Specify the name of your Dockerfile
+    image: ruby-http:latest # Update latest to specific version if required
+    ports:
+      - "8000:8000"
