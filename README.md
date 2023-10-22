@@ -89,6 +89,7 @@ Helm chart for application is located in `ruby-helm`.
     ```shell
     $: cd ruby-http
     $: chmod +x setup.sh
+    # Application is deployed inside ruby namespace
     $: ./setup.sh
     ```
     The `setup.sh` script will perform the following tasks:
