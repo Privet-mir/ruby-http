@@ -15,6 +15,6 @@ WORKDIR /usr/src/app/
 
 COPY --chown=mohammed . ./
 
-EXPOSE 80
+EXPOSE 8000
 #When setting the CMD instruction, prefer the exec format over the shell format
 CMD ["ruby", "./http_server.rb"]
