@@ -59,7 +59,7 @@ CI/CD Pipeline Design
 
 In the image above, you can observe a seamless integration pipeline. The process begins with GitHub Actions, where we automate the building of a Docker image for our application and subsequently push this image to a DockerHub repository. We then ensure the latest image tag is updated in the Helm value file within our Git repository.
 
-The key advantage of this pipeline is that every time code changes are made in the Application repository, an automated sequence of actions is triggered. First, a new Docker container image is created. Next, this image is pushed to DockerHub. Finally, we manually update the image tag within the Helm value file. This automated process ensures that the most recent version of our application is readily available for deployment.
+The key advantage of this pipeline is that every time code changes are made in the Application repository, an automated sequence of actions is triggered. First, a new Docker container image is created. Next, this image is pushed to DockerHub. Finally, we manually update the image tag within the Helm value file. This process ensures that the most recent version of our application is readily available for deployment.
 
 ## Build
 
