@@ -129,7 +129,7 @@ Monitoring is crucial to ensure the health and performance of the application. H
     ```shell
     $: kubectl port-forward svc/prometheus-grafana 3000:80 -n monitor &
     ```
-    To log in, use the following credentials:
+    To log into [grafana](http://localhost:3000/d/85a562078cdf77779eaa1add43ccec1e/kubernetes-compute-resources-namespace-pods?orgId=1&refresh=10s&var-datasource=default&var-cluster=&var-namespace=ruby&from=1698045713785&to=1698049313785), use the following credentials:
     * Username: admin
     
     You can retrieve the password with the following command:
